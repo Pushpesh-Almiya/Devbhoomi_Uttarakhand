@@ -43,7 +43,7 @@ function Navbar() {
         onClick={() => setToggle(!toggle)}
         className="cursor-pointer md:hidden pe-4 z-10 text-white"
       >
-        {toggle ?<i class="fa-solid fa-x text-3xl"></i> :<i class="fa-solid fa-bars text-3xl"></i> }
+        {toggle ?<i className="fa-solid fa-x text-3xl"></i> :<i className="fa-solid fa-bars text-3xl"></i> }
       </div>
 
       {toggle && (

@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Uttarakhand/>}></Route>
           <Route exact path="/districts" element={<District/>} ></Route>
-          <Route exact path="/tourism/:name" element={<Tourism/>} ></Route>
+          <Route exact path="/districts/:name" element={<Tourism/>} ></Route>
           <Route exact path="/about" element={<About/>} ></Route>
           <Route exact path="/contact" element={<Contact/>} ></Route>
       </Routes>
