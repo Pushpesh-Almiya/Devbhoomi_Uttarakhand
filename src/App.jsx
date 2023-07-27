@@ -7,6 +7,7 @@ import Contact from "./Components/Contact";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Tourism from "./Components/Tourism";
 import DistrictState from "./Context/districtState"
+import Details from "./Components/Details";
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Uttarakhand/>}></Route>
           <Route exact path="/districts" element={<District/>} ></Route>
-          <Route exact path="/districts/:name" element={<Tourism/>} ></Route>
+          <Route exact path="/districts/:name" element={<Details/>} ></Route>
+          <Route exact path="/districts/:name/tourism" element={<Tourism/>}></Route>
           <Route exact path="/about" element={<About/>} ></Route>
           <Route exact path="/contact" element={<Contact/>} ></Route>
       </Routes>
