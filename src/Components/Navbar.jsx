@@ -10,13 +10,13 @@ function Navbar() {
     },
     {
       id: 2,
-      link: "about",
-      path:"/about"
+      link: "District",
+      path:"/districts"
     },
     {
       id: 3,
-      link: "District",
-      path:"/districts"
+      link: "about",
+      path:"/about"
     },
     {
       id: 4,
@@ -25,7 +25,7 @@ function Navbar() {
     }
   ];
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 fixed bg-green-700 text-white">
+    <div className="flex justify-between items-center w-full h-20 px-4 fixed z-50 bg-green-700 text-white">
       <div>
         <h1 className="font-signature text-5xl ml-2">Devbhoomi</h1>
       </div>
