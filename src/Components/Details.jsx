@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Tourism from './Tourism';
 import SlideBar from './Carousel';
 
 function Details() {
+  const[backToTop, setBackToTop]=useState(false)
     const params = useParams()
-    // const navigate = useNavigate()
     const [districtDetails, setDistrictDetails]=useState([
       {
         name:"almora",
@@ -28,7 +28,7 @@ function Details() {
         history :"The area, that now forms Bageshwar district, was historically known as Danpur, and was ruled by Katyuris during the 7th century AD. After the disintegration of the Katyuri kingdom in the 13th century, the area remained under the rule of Baijnath Katyurs, direct descendants of Katyuri kings.[4] In 1565, king Balo Kalyan Chand annexed Danpur along with Pali, Barahmandal and Mankot to Kumaun.In 1791, Almora, the seat of the Kumaon, was invaded and annexed by the Gorkhas of Nepal.[6] The Gorkhas ruled the region for 24 years and were later defeated by the East India Company in 1814,[7][8][9] and were forced to cede Kumaon to the British as part of the Treaty of Sugauli in 1816.[10]: 594 [11] After its annexation by British, Bageshwar was a part of the Danpur pargana in Almora district of United Provinces. Bageshwar was made a separate tehsil in 1974, and in 1976 it was declared a pargana, after which, it formally came into being as a large administrative center. Since 1985, the demand for declaring it a separate district of different parties and regional people started, and finally, in September 1997, Bageshwar was made the new district of Uttar Pradesh by Chief Minister Mayawati"
       },{
         name:"champawat",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/Champawat.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -37,7 +37,7 @@ function Details() {
         history:"Champawat district was formerly a part of almora district. In 1972, the part came under pithoragarh district. In 1997 september 15, champawat was declared an individual, independent district.Champawat is valued in uttarakhand as the place of origin of culture and religion in uttarakhand region. The champawat land is considered to be the home of naga and kinnar described in hindu mythology. The region was ruled by khash kings in past. Historical pillars, monuments, manuscripts, archeological collections and folklores of the region are the evidences to its historical importance.  The manuscripts make it clear that katyur dynasty ruled the region in the past.Champawat district is one among 13 districts of uttarakhand state, india. Champawat district administrative head quarter is champawat. It is is located 266 km west towards state capital dehradun . Champawat district population is 259648 approx. It is 12 th largest district in the state by population."
       },{
         name:"nainital",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/nainital.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -46,7 +46,7 @@ function Details() {
         history:"The Krol group of rocks, comprising slates, marls, sandstones, limestones and dolomites with a few small dykes intrusives, is the dominant geological formation of Nainital's surroundings, although, Nodules, laminae and stringers of phosphatic material, followed upward by the purple-green shales intercalated with muddy fine-grained sandstone and siltstone; recognised as the Tal Formation; are also prevalent. The region has a complex geological framework; the rocks are fragile and newly formed. The town is completely located in the catchment area of the Nainital lake, which has highly folded and faulted rocks due to polyphase deformation.Landslides are a frequent occurrence in the hill slopes surrounding the lake, which are steep. The slopes are highly vulnerable to landslides and mass movement due to various geological and human factors. The first known landslip occurred in Nainital in 1866 on Alma hill, and in 1879 there was a larger one at the same spot. The greatest landslide in Nainital occurred on 18 September 1880, on the slope which rising from the north of the flats ends at Alma peak, and resulted in 151 people being buried under the debris.[12] Another heavy landslip occurred on 17 August 1898 outside the Nainital valley."
       },{
         name:"udham singh nagar",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/US-nagar.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -55,7 +55,7 @@ function Details() {
         history:"From nature lovers and spiritual seekers to those looking to escape the daily grind – the district of Udham Singh Nagar has something for every kind of traveller. Be it pilgrimages to one of the numerous revered sites of worship, enjoying a fun-filled picnic with family and friends at one of the lakes or just taking in the serene beauty of the surroundings – there is never a dull moment here. The uniqueness of this district lies in the fact that it is home to communities from several Indian states – Jammu & Kashmir, Kerala, Punjab, Haryana, Rajasthan and more – who live in harmony, reiterating the age-old saying 'unity in diversity'.The district headquarter is located in Rudrapur, which is said to have derived its name from king Rudra Chandra, a tribal chief. According to history, in 1588, Mughal emperor Akbar handed the land to king Rudra, who set up a military camp with the intention of ridding Terai of frequent invasions.A largely industrial and agricultural district, Udham Singh Nagar was a part of the Nainital district before it gained the identity of a separate district in October 1995. Known as the 'food bowl of Uttarakhand' and 'chawal ki nagari', the district was named in the memory of Late Shri Udham Singh, a great freedom fighter."
       },{
         name:"pithoragarh",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/Pithoragarh.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -64,7 +64,7 @@ function Details() {
         history:"Pithoragarh city and its surrounding areas were part of the Manaskhand region, which extended from the Kailash Mountain in the north to Bhabar & Terai in the south, as mentioned in the Skanda Purana.[4]: 12  The Asuras and Nagas appear to be the earliest inhabitants of the region, who were later superseded by the Kiratas, Khasas and the Kunindas.[4]: 13  The Kuninda Kings of the region may have become the feudatories of The Kushana Kings, who held their sway over the region in the last quarter of the 1st century AD.[4]: 16  The region subsequently came under the Kurmanchal kingdom, which had its capital first at Jyotirmath and then at Karikeyapura (Modern day Baijnath) in the Katyur Valley.Upon the disintegration of the Katyuris and fall of kingdom in 13th century, Pithoragarh came under the rule of Bam kings of Saur. The Bam kings were feudal to the Raikas of Doti and was a branch of katyuri kings, and had their capital at Udaipur near Pithoragarh, However, the Rajas used to come down to Rameshwar and Bailorkol during the winter months. In the fifteenth century, King Bharti Chand of Champawat amassed a huge army, and started plundering and killing in the regions ruled by the Doti Kings. This resulted in a war, which lasted for 12 years, and ended with a victory for the Chands.[6]: 213–214  After the death of Bharti Chand in 1462, Nagmalla, the king of Doti attacked his son, Ratna Chand who was successful in defending himself.[6]: 213–214  Nagmalla was killed in the war and the Bams became feudatories of the Chands.[6]: 215–216  The pargana of Saur came under direct control of the Kingdom of Kumaon in the sixteenth century during the rule of King Balo Kalyan Chand, when it was given to him by the Raika king of Doti as dowry for marrying his Daughter."
       },{
         name:"dehradun",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/dehradun.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -73,7 +73,7 @@ function Details() {
         history:"Dehradun is a notable academic and research hub and is home to the Indian Military Academy, Forest Research Institute, Indira Gandhi National Forest Academy, The Doon School, Welham Boys School, Welham Girls School, Brightlands School, Rashtriya Indian Military College, Uttarakhand Ayurveda University, Wadia Institute of Himalayan Geology and the Indian Institute of Remote Sensing. It is the headquarters of the Surveyor-General of India. According to the combined survey based on health, infrastructure, economy, education, and crime, conducted by Dainik Jagran and KPMG, Dehradun is one of India's safest cities.[16][17] Dehradun is also known for its Basmati rice and bakery products.Also known as the Abode of Drona,[18] Dehradun has been an important center for Garhwal rulers and was captured by the British. For its strategic value, in addition to the location of its principal service academy, the Indian Armed Forces maintain a considerable presence in Dehradun, at the Garhi Cantonment and Naval Station. The Uttarakhand Police is the primary law enforcement agency in the city."
       },{
         name:"haridwar",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/Haridwar.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -82,7 +82,7 @@ function Details() {
         history:"According to Puranic legend, Haridwar, along with Ujjain, Nashik, and Prayag, is one of four sites where drops of amrita,[6] the elixir of immortality, accidentally spilled over from a kumbha (pitcher) while being carried by the celestial bird Garuda during the Samudra Manthana, or the churning of the ocean of milk.[7] Brahma Kund, the spot where the amrita fell, is believed to be located at Har ki Pauri (literally, \"footsteps of the Lord\") and is considered to be the most sacred ghat of Haridwar.[8] It is also the primary centre of the Kanwar pilgrimage, in which millions of participants gather sacred water from the Ganges and carry it across hundreds of miles to dispense as offerings in Shiva shrines.[9] Today, the city is developing beyond its religious importance with the fast-developing industrial estate of the State Industrial Development Corporation of Uttarakhand (SIDCUL), and the close by township of Bharat Heavy Electricals Limited (BHEL), as well as its affiliated ancillaries. Haridwar presents a kaleidoscope of Indian culture and development. In sacred writings, it has been differently specified as Kapilsthan, Gangadwar and Mayapuri. It is additionally a passage for the Chota Char Dham (the four principal pilgrim destinations in Uttarakhand). Subsequently, Shaivites (devotees of Shiva) and Vaishavites (devotees of Vishnu) call the city Hardwar and Haridwar, respectively, Har meaning Shiva and Hari, Vishnu."
       },{
         name:"tehri garhwal",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/tehri.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -91,7 +91,7 @@ function Details() {
         history:"Prior to 734 CE, the region was divided into 48 garh which were ruled by independent kings. These garh were brought into one province by Kanakpal, a prince of Malwa. Kanakpal, on his visit to Badrinath, had met the then mightiest king Bhanu Pratap who later married his only daughter to the prince and handed over his kingdom to him. Kanakpal Singh and his descendants gradually conquered all the garh and ruled the whole of Garhwal Kingdom for the next 915 years, up to 1803."
       },{
         name:"uttarkashi",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/Uttarkashi.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -100,7 +100,7 @@ function Details() {
         history:"It is the district headquarters of Uttarkashi district. Uttarkashi is situated on the banks of river Bhagirathi at an altitude of 1158 m above sea level. Uttarkashi is generally known as a holy town close to Rishikesh. It is located in the state of Uttarakhand in India. Uttarkashi is home to a number of ashrams and temples and also to the Nehru Institute of Mountaineering. The name of the town reflects its similarity to and location (as north of) the city of Kashi (Varanasi). Similar to Varanasi, town of Uttarkashi is situated on the Ganges, lies next to a hill named Varunavat, on confluence of two rivers Varuna and Asi, has a ghat called Manikarnika Ghat and has a temple dedicated to Shiva similar to (Kashi Vishwanath Temple) in Varanasi, in the center of the town."
       },{
         name:"chamoli",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/Chamoli.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -109,7 +109,7 @@ function Details() {
         history:"The region covered by the district of Chamoli formed part of the Pauri Garhwal district till 1960. It occupies the northeastern corner of the Garhwal tract and lies in the central or mid-Himalayas in the very heart of the snowy range described in ancient books as Bahirgiri, one of the three divisions of the Himalayan mountains.Chamoli, the district of \"Garhwal\" the land of forts. Today's Garhwal was known as Kedar-khand in the past. In puranas Kedar-khand was said to be abode of Hindu God. It seems from the facts[citation needed] vedas puranas, Ramayna and Mahabharat that these Hindu scriptures are scripted in kedar-khand. It is believed that Hindu God Ganesha first script of vedas in Vayas gufa situated in the last village Mana only 4 km (2.5 mi) from Badrinath.According to Rigveda (1017–19) after Inundation (Jalprlya) Sapt-Rishis saved their lives in the same village Mana. Besides there the roots of vedic literature seems[citation needed] to be originated from Garhwal because the Garhwali language has a lot of words common with Sanskrit. The work place of vedic Rishis are the prominent pilgrim places in Garhwal specially in chamoli like Atrimuni Ashram in Anusuya about 25 km (16 mi) from chamoli town and work place of Kashyap Rishi at Gandhmadan parwat near Badrinath. According to Aadi-Puran, vedvyasa scripted the story of Mahabhrat in Vyas Gufa near Badrinath. Pandukeshwar, a small village situated on the Rishikesh Badrinath high-way from where Badrinath is just 25 km (16 mi) away is regarded as Tapsthali (place where one practices Hindu religious austerities) of King Pandu. In Kedar-khand Puran this land is regarded the land of lord Shiva.The authentic script about the history of Garhwal is found only 6th AD onward. Some of the oldest examples of these are the trishul in Gopeshwar, lalitsur in Pandukeshwar. The Narvaman rock script in siroli the chand pur Gari rock script by king Kankpal authenticates the history and culture of Garhwal."
       },{
         name:"pauri garhwal",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/Pauri.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -118,7 +118,7 @@ function Details() {
         history:"Human civilization in the Garhwal Himalayas has progressed with the rest of the Indian sub-continent. The Katyuri kings comprised the first historical dynasty, which ruled over unified Uttarakhand from 800 to 1100 and left records in the form of inscriptions and temples. After the downfall of the Katyuris, the Garhwal region was fragmented in more than sixty-four principalities ruled by chieftains. In the mid 15th century, Chandpurgarh emerged as a powerful principality under the rule of Jagatpal (1455 to 1493), who was a descendant of Kanakpal. At the end of 15th century, Ajaypal ruled Chandpurgarh and succeeded in unifying and consolidating various principalities on the region. His kingdom came to known as Garhwal. Subsequently, he transferred his capital from Chandpur to Devalgarh, before 1506, and later to Srinagar, from 1506 to 1519.King Ajaypal and his successors ruled Garhwal for nearly three hundred years. During this period they faced a number of attacks from Kumaon, Mughals, Sikhs, and Rohillas. An important event in the history of Garhwal was the Gorkha invasion, which was marked by extreme brutality. The word Gorkhyani has become synonymous with massacre and marauding armies. After subjugating Doti and Kumaon, the Gorkhas attacked Garhwal and reached as far as Langoorgarh, despite stiff resistance of the Garhwali forces. Then, news came of a Chinese invasion at the rear of the Gorkhas, who were forced to lift the siege. In 1803, the Gorkhas again mounted an invasion. After capturing Kumaon, they attached Garhwal. After initial defeats, King Pradyumna Shah escaped to Dehradun to futilely reorganize his defenses. Garhwali soldiers suffered heavy casualties and the king himself was killed in the Battle of Khurbura. The Gorkhas became the masters of Garhwal in 1804 and ruled the territory for twelve years.["
       },{
         name:"rudraprayag",
-        Img1 :"../images/Districts/Almora.png",
+        Img1 :"../images/Districts/rudrapryag.jpg",
         Img2 :"../images/Districts/Almora.png",
         Img3 :"../images/Districts/Almora.png",
         Img4 :"../images/Districts/Almora.png",
@@ -133,22 +133,39 @@ function Details() {
         return arr.name === cityName
     }))
   }
+  const scrollUp =()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  }
   
   useEffect(()=>{
     district(params.name)
+    scrollUp()
+    window.addEventListener("scroll",()=>{
+      if(window.scrollY>100){
+        setBackToTop(true)
+      }else{
+        setBackToTop(false)
+      }
+    })
+    // eslint-disable-next-line
   },[])
   
   return (
     <>
     <div className= 'w-full pt-20'>
-        <h1 className="text-6xl capitalize font-signature text-center text-blue-700">{params.name}</h1>
+        <h1 className="text-6xl my-4 capitalize font-signature text-center text-blue-700">{params.name}</h1>
         <SlideBar districtDetails={districtDetails} />
       <p>{districtDetails[0].about}</p>
       <p>{districtDetails[0].history}</p>
 
     {/* <button className="text-center px-5 py-2 rounded-lg font-signature text-2xl  bg-gradient-to-r from-cyan-800 to-green-800 text-white" onClick={()=>{navigate(-1)}}>Back</button> */}
     <Tourism/>
-      
+      {backToTop && (
+        <button className='fixed bottom-10 right-10 h-16 w-16 pt-2 rounded-full text-white text-3xl flex justify-center items-center shadow-lg border-2 bg-black opacity-60 ' onClick={scrollUp}>^</button>
+      )}
     </div>
     </>
   )
