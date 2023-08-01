@@ -25,7 +25,7 @@ function District() {
   return (
     <div className="pt-24 bg-green-100">
       <h1 className='font-signature text-4xl text-center my-2'> Uttarakhand Districts</h1>
-    <div className='w-full pt-2  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-green-100 gap-5'>
+    <div className='w-full pt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-green-100 gap-5'>
         {dist.map(({id, name,source,area, population,about})=>{
         return <div key={id} className="rounded overflow-hidden shadow-lg mx-1 bg-green-300 mt-5">
             <img
@@ -34,11 +34,11 @@ function District() {
               loading="lazy"
               alt="source"
             />
-            <div className="px-6 py-1 mb-5">
+            <div className="px-1 sm:px-2 h-1/2 py-1 mb-5">
               <h1 className="text-2xl capitalize font-bold text-center">{name}</h1>
               <p className="text-xl">{about}</p>
-              <p className="font-bold">Area :<span className="font-light px-2">{area}</span></p>
-              <p className="font-bold">Population :<span className="font-light px-2">{population}</span></p>
+              <h1 className="font-bold mt-2">Area :<span className="font-light px-2">{area}</span></h1>
+              <h1 className="font-bold">Population :<span className="font-light px-2">{population}</span></h1>
               <div className="flex justify-center items-center mt-10">
               {/* <Link className="text-center px-5 py-2 rounded-lg font-signature text-2xl  bg-gradient-to-r from-cyan-800 to-green-800 text-white" to={`/districts/${name}`}>Visit Now</Link> */}
               <button className="text-center px-5 py-2 rounded-lg font-signature text-2xl  bg-gradient-to-r from-cyan-800 to-green-800 text-white" onClick={()=>{navigate(`/districts/${name}`)}}>Visit Now</button>

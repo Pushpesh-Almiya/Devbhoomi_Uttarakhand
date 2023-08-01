@@ -14,8 +14,8 @@ function Details() {
         Img3 :"../images/Districts/Almora1.jpg",
         Img4 :"../images/Districts/Almora2.jpg",
         Img5 :"../images/Districts/Almora4.jpg",
-        about:"Almora (Kumaoni: Almāḍ) is a municipal board and a cantonment town in the state of Uttarakhand, India. It is the administrative headquarters of Almora district.[4] Almora is located on a ridge at the southern edge of the Kumaon Hills of the Himalaya range. The Koshi (Kaushiki) and Suyal (Salmale) rivers flow along the city and snow-capped Himalayas can be seen in the background.Almora was founded in 1568.[5] by King Kalyan Chand;[6][7][8] however, there are accounts of human settlements in the hills and surrounding region in the Hindu epic Mahabharata[9] (8th and 9th century BCE[10]). Almora was the seat of Chand kings that ruled over the Kumaon Kingdom. It is considered the cultural heart of the Kumaon region of Uttarakhand.According to the provisional results of the 2019 national census of India, Almora had a population of about 179,000.[citation needed] Nestled within higher peaks of the Himalaya, Almora enjoys a year-round mild temperate climate. The town is visited by thousands of tourists annually from all over the world.[citation needed] There are 11 blocks (i.e. VikashKhand) in Almora district.",
-        history:"Almora got its name from Bhilmora, a kind of sorrel (although some have tried to derive it from Berberis \"kilmora\"[11][12]), a short plant commonly found there[13] which was used for washing the utensils of the sun temple at Katarmal. The people bringing the Bhilmora/kilmora were called Bhilmori/Kilmori and later \"Almori\" and the place came to be known as \"Almora\".When king Bhishm Chand laid the foundation of the town, he had initially named it Alamnagar. Prior to that, Almora was known as 'Rajapur' during the early phase of Chand rule.[16][17][18] The name 'Rajpur' is also mentioned over a number of ancient copper plates.[18] There is still a place called Rajpur in Almora."
+        about:"Almora is a municipal board and a cantonment town in the state of Uttarakhand, India. It is the administrative headquarters of Almora district.[4] Almora is located on a ridge at the southern edge of the Kumaon Hills of the Himalaya range. The Koshi (Kaushiki) and Suyal (Salmale) rivers flow along the city and snow-capped Himalayas can be seen in the background.Almora was founded in 1568.[5] by King Kalyan Chand;[6][7][8] however, there are accounts of human settlements in the hills and surrounding region in the Hindu epic Mahabharata[9] (8th and 9th century BCE[10]). Almora was the seat of Chand kings that ruled over the Kumaon Kingdom. It is considered the cultural heart of the Kumaon region of Uttarakhand.According to the provisional results of the 2019 national census of India, Almora had a population of about 179,000.[citation needed] Nestled within higher peaks of the Himalaya, Almora enjoys a year-round mild temperate climate. The town is visited by thousands of tourists annually from all over the world.[citation needed] There are 11 blocks (i.e. VikashKhand) in Almora district.",
+        history:"Almora got its name from Bhilmora, a kind of sorrel (although some have tried to derive it from Berberis \"kilmora\"[11][12]), a short plant commonly found there[13] which was used for washing the utensils of the sun temple at Katarmal. The people bringing the Bhilmora/kilmora were called Bhilmori/Kilmori and later \"Almori\" and the place came to be known as \"Almora\".When king Bhishm Chand laid the foundation of the town, he had initially named it Alamnagar. Prior to that, Almora was known as 'Rajapur' during the early phase of Chand rule.The name 'Rajpur' is also mentioned over a number of ancient copper plates.[18] There is still a place called Rajpur in Almora."
       },
       {
         name:"bageshwar",
@@ -55,8 +55,8 @@ function Details() {
         history:"From nature lovers and spiritual seekers to those looking to escape the daily grind – the district of Udham Singh Nagar has something for every kind of traveller. Be it pilgrimages to one of the numerous revered sites of worship, enjoying a fun-filled picnic with family and friends at one of the lakes or just taking in the serene beauty of the surroundings – there is never a dull moment here. The uniqueness of this district lies in the fact that it is home to communities from several Indian states – Jammu & Kashmir, Kerala, Punjab, Haryana, Rajasthan and more – who live in harmony, reiterating the age-old saying 'unity in diversity'.The district headquarter is located in Rudrapur, which is said to have derived its name from king Rudra Chandra, a tribal chief. According to history, in 1588, Mughal emperor Akbar handed the land to king Rudra, who set up a military camp with the intention of ridding Terai of frequent invasions.A largely industrial and agricultural district, Udham Singh Nagar was a part of the Nainital district before it gained the identity of a separate district in October 1995. Known as the 'food bowl of Uttarakhand' and 'chawal ki nagari', the district was named in the memory of Late Shri Udham Singh, a great freedom fighter."
       },{
         name:"pithoragarh",
-        Img2 :"../images/Districts/Pithoragarh1.jpg",
-        Img1 :"../images/Districts/Pithoragarh.jpg",
+        Img1 :"../images/Districts/Pithoragarh1.jpg",
+        Img2 :"../images/Districts/Pithoragarh.jpg",
         Img3 :"../images/Tourism/Munsyari.jpg",
         Img4 :"../images/Tourism/Dharchula.jpg",
         Img5 :"../images/Tourism/OmParvat.jpeg",
@@ -155,11 +155,11 @@ function Details() {
   
   return (
     <>
-    <div className= 'w-full pt-20'>
-        <h1 className="text-6xl my-4 capitalize font-signature text-center text-blue-700">{params.name}</h1>
+    <div className= 'w-full pt-20 flex flex-col'>
+        <h1 className="text-6xl my-4 capitalize font-signature  border-black inline-block mx-auto text-blue-700">{params.name}</h1>
         <SlideBar districtDetails={districtDetails} />
-      <p>{districtDetails[0].about}</p>
-      <p>{districtDetails[0].history}</p>
+      <p className='p-5'>{districtDetails[0].about}</p>
+      <p className='p-5'>{districtDetails[0].history}</p>
 
     {/* <button className="text-center px-5 py-2 rounded-lg font-signature text-2xl  bg-gradient-to-r from-cyan-800 to-green-800 text-white" onClick={()=>{navigate(-1)}}>Back</button> */}
     <Tourism/>

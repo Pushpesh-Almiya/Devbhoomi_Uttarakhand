@@ -27,7 +27,7 @@ function Navbar() {
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 fixed z-50 bg-green-700 text-white">
       <div>
-        <h1 className="font-signature text-5xl ml-2">Devbhoomi</h1>
+        <h1 className="font-signature text-5xl ml-2">Devbhumi</h1>
       </div>
       <ul className="hidden md:flex">
         {links.map(({ id, link,path }) => (
@@ -48,7 +48,7 @@ function Navbar() {
 
       {toggle && (
         <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-green-600 to-green-950">
-          <li className="font-signature text-5xl ml-2">Devbhoomi</li>
+          <li className="font-signature text-5xl ml-2">Devbhumi</li>
           {links.map(({ id, link,path }) => (
             <li
               key={id}

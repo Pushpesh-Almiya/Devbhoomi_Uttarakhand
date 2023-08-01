@@ -8,4 +8,8 @@
     html{
         font-family: 'Lora', serif, monospace;
     }
+    p::first-letter {
+        padding-left: 2rem;
+    }
+    
 }

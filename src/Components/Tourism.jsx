@@ -877,8 +877,8 @@ function Tourism() {
                     className="rounded p-5 mx-auto w-full"
                   />
                 </div>
-                <div className=" flex flex-col justify-center items-center w-full md:w-3/4">
-                  <p className="px-1 py-2">{firstPara}</p>
+                <div className=" flex flex-col justify-center items-center p-1 w-full md:w-3/4">
+                  <p className="px-1 pt-2">{firstPara}</p>
                   <p className="px-1 py-2">{secondPara}</p>
                 </div>
               </div>
