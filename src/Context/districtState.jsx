@@ -54,7 +54,7 @@ function DistrictState(props) {
     {
         id:"UK07",
         name: "dehradun",
-        source:"../images/Districts/bageshwar.jpg",
+        source:"../images/Districts/Dehradun.jpg",
         about:"",
         area:"2,908",
         population: "1,648,367"

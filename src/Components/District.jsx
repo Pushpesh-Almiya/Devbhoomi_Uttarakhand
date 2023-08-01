@@ -23,12 +23,15 @@ function District() {
     })
   },[])
   return (
-    <div className='w-full pt-20  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-green-100 gap-5'>
+    <div className="pt-24 bg-green-100">
+      <h1 className='font-signature text-4xl text-center my-2'> Uttarakhand Districts</h1>
+    <div className='w-full pt-2  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 bg-green-100 gap-5'>
         {dist.map(({id, name,source,area, population,about})=>{
         return <div key={id} className="rounded overflow-hidden shadow-lg mx-1 bg-green-300 mt-5">
             <img
               className="w-full h-1/3 p-1 mx-auto rounded"
               src={source}
+              loading="lazy"
               alt="source"
             />
             <div className="px-6 py-1 mb-5">
@@ -47,6 +50,8 @@ function District() {
           </div>
 })}
       
+    </div>
+    
     </div>
   );
 }

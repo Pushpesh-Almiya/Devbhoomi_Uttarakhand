@@ -1,12 +1,42 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 
 function Uttarakhand() {
+
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 3000 },
+      items: 5,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  }
   const navigate = useNavigate()
   return (
     <>
-    <div className='pt-20 bg-green-100 flex flex-col'>
+    <div className="z-0 pt-24 bg-green-100" >
+      <Carousel   responsive={responsive}  showDots={true} keyBoardControl={true} ssr={true} >
+        <img className="px-3 w-full h-60" src="../images/Districts/Uttrakhand2.jpg" alt="" />
+        <img className="px-3 w-full h-60" src="../images/Districts/rudrapryag.jpg" alt="" />
+        <img className="px-3 w-full h-60" src="../images/Districts/Uttrakhand3.jpg" alt="" />
+        <img className="px-3 w-full h-60" src="../images/Tourism/RISHIKESH.jpg" alt="" />
+        <img className="px-3 w-full h-60" src="../images/Districts/Uttrakhand4.jpg" alt="" />
+      </Carousel>
+    </div>
+    <div className='pt-5 bg-green-100 flex flex-col'>
     <h1 className='font-signature text-4xl text-center my-2'> Devbhoomi Uttarakhand</h1>
       <p className='p-2'><span className='pl-8 text-green-950 font-bold'>Uttarakhand </span>also known as Uttaranchal is a state in northern India. It is often referred to as the "Devbhumi" due to its religious significance and numerous Hindu temples and pilgrimage centres found throughout the state. Uttarakhand is known for the natural environment of the Himalayas, the Bhabar and the Terai regions. It borders the Tibet Autonomous Region of China to the north; the Sudurpashchim Province of Nepal to the east; the Indian states of Uttar Pradesh to the south and Himachal Pradesh to the west and north-west. The state is divided into two divisions, Garhwal and Kumaon, with a total of 13 districts. The winter capital of Uttarakhand is Dehradun, the largest city of the state, which is a rail head. Gairsain, a town in Chamoli district, is the summer capital of Uttarakhand declared on 5 March 2020. The High Court of the state is located in Nainital, but is to be moved to Haldwani in future.</p>
       <br/>
