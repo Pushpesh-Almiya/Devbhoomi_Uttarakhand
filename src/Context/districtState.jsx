@@ -109,9 +109,15 @@ function DistrictState(props) {
         population: "1,648,367"
     },
 ]
+const scrollUp =()=>{
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    })
+  }
   return (
     <div>
-        <districtContext.Provider value={{dist}}>{props.children}</districtContext.Provider>
+        <districtContext.Provider value={{dist, scrollUp}}>{props.children}</districtContext.Provider>
     </div>
   )
 }

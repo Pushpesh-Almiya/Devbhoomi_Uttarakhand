@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   const links = [
@@ -27,7 +28,10 @@ function Navbar() {
   return (
     <div className="flex justify-between items-center w-full h-20 px-4 fixed z-50 bg-green-700 text-white">
       <div>
-        <h1 className="font-signature text-5xl ml-2">Devbhumi</h1>
+        <div className="flex justify-center items-center">
+        <h1 className="font-signature text-5xl mx-2">Devbhumi</h1>
+        <img src="../Images/Tourism/Monal.png" alt="Monal" className="w-16 h-16"/>
+        </div>
       </div>
       <ul className="hidden md:flex">
         {links.map(({ id, link,path }) => (
@@ -43,12 +47,15 @@ function Navbar() {
         onClick={() => setToggle(!toggle)}
         className="cursor-pointer md:hidden pe-4 z-10 text-white"
       >
-        {toggle ?<i className="fa-solid fa-x text-3xl"></i> :<i className="fa-solid fa-bars text-3xl"></i> }
+        {toggle ?<i className="fa-solid fa-x text-3xl"></i> :<i className="fa-solid fa-bars text-3xl "></i> }
       </div>
 
       {toggle && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-green-600 to-green-950">
-          <li className="font-signature text-5xl ml-2">Devbhumi</li>
+        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-cover bg-center" style={{backgroundImage:"url('../images/Photos/Navbar.jpg')"}}>
+          <div className="flex justify-center items-center">
+          <li className="font-signature text-5xl mx-2">Devbhumi</li>
+          <img src="../Images/Tourism/Monal.png" alt="Monal" className="w-16 h-16"/>
+          </div>
           {links.map(({ id, link,path }) => (
             <li
               key={id}

@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import Tourism from './Tourism';
 import SlideBar from './Carousel';
+import districtContext from "../Context/DistrictsContexts";
 
 function Details() {
   const[backToTop, setBackToTop]=useState(false)
+  const context = useContext(districtContext)
+  const {scrollUp} =context
     const params = useParams()
     const [districtDetails, setDistrictDetails]=useState([
       {
@@ -133,12 +136,6 @@ function Details() {
         return arr.name === cityName
     }))
   }
-  const scrollUp =()=>{
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    })
-  }
   
   useEffect(()=>{
     district(params.name)
@@ -156,7 +153,7 @@ function Details() {
   return (
     <>
     <div className= 'w-full pt-20 flex flex-col'>
-        <h1 className="text-6xl my-4 capitalize font-signature  border-black inline-block mx-auto text-blue-700">{params.name}</h1>
+        <h1 className="text-5xl md:text-6xl my-4 capitalize font-signature  border-black inline-block mx-auto text-blue-700">{params.name}</h1>
         <SlideBar districtDetails={districtDetails} />
       <p className='p-5'>{districtDetails[0].about}</p>
       <p className='p-5'>{districtDetails[0].history}</p>

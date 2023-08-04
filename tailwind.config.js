@@ -5,6 +5,9 @@ module.exports = {
       extend: {},
       fontFamily :{
         signature:['Caveat', "cursive"]
+      },
+      backgroundImage: {
+        'hero': "url('./images/Photos/About.jpeg')"
       }
     },
   plugins: [],

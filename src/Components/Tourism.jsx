@@ -866,7 +866,7 @@ function Tourism() {
         {tuoristPlaces.map(({ name, img, firstPara, secondPara }) => {
           return (
             <div className="border-b-2 border-black mt-5">
-              <h1 className="text-center text-4xl capitalize font-arial">
+              <h1 className="text-center text-3xl md:text-4xl capitalize font-arial">
                 {name}
               </h1>
               <div className="w-full md:flex">

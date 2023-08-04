@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Tourism from "./Components/Tourism";
 import DistrictState from "./Context/districtState"
 import Details from "./Components/Details";
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/about" element={<About/>} ></Route>
           <Route exact path="/contact" element={<Contact/>} ></Route>
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </DistrictState>
     </>
