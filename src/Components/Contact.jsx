@@ -45,13 +45,12 @@ function Contact() {
           style={{ backgroundImage: "url('../images/Photos/Hero.jpg')" }}
           className="pt-8 bg-no-repeat bg-cover bg-center w-full h-80 flex flex-col justify-center items-center"
         >
-          <div class={`p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 ${alert===""?"hidden":""}`} role="alert">
+          <div class={`p-4 mb-4 text-sm flex justify-center items-center text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400 ${alert===""?"hidden":""}`} role="alert">
             {alert}
 </div>
           <h1 className="font-signature text-6xl text-white">Contact</h1>
-          <p className="py-6 text-xl text-center text-white">
-            Submit the form below to add something or hidden places of
-            Uttarakhand into the website 
+          <p className="py-6 text-xl mx-auto text-center text-white">
+            Submit the form below to contact with me!!! 
           </p>
         </div>
       <div className="p-4 flex flex-col justify-center">
