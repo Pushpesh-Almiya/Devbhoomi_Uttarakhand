@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
+  const login = localStorage.getItem("login")
+  // console.log(login)
+  const logoutBtn =()=>{
+    localStorage.removeItem("login")
+  }
+
   const links = [
     {
       id: 1,
@@ -42,6 +48,10 @@ function Navbar() {
             <Link to={path}>{link}</Link>
           </li>
         ))}
+        <li>
+        {login=="true"?<Link to="/login" onClick={logoutBtn} >Logout</Link>:<Link  to="/login">Login</Link>}
+              
+            </li>
       </ul>
       <div
         onClick={() => setToggle(!toggle)}
@@ -64,6 +74,11 @@ function Navbar() {
               <Link onClick={()=>setToggle(!toggle)} to={path} >{link}</Link>
             </li>
           ))}
+            <li
+              className="py-4 cursor-pointer capitalize font-medium text-white hover:scale-110 duration-200 text-2xl"
+            >
+              <Link  to="/login" >Login</Link>
+            </li>
         </ul>
       )}
     </div>

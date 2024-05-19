@@ -9,6 +9,10 @@ import Tourism from "./Components/Tourism";
 import DistrictState from "./Context/districtState"
 import Details from "./Components/Details";
 import Footer from "./Components/Footer";
+import Login from "./Components/Login";
+import SignUp from "./Components/SignUp";
+import Protected from "./Components/Protected";
+
 
 
 function App() {
@@ -20,10 +24,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Uttarakhand/>}></Route>
           <Route exact path="/districts" element={<District/>} ></Route>
-          <Route exact path="/districts/:name" element={<Details/>} ></Route>
+          <Route exact path="/districts/:name" element={<Protected Component ={Details}/>} ></Route>
           <Route exact path="/districts/:name/tourism" element={<Tourism/>}></Route>
           <Route exact path="/about" element={<About/>} ></Route>
           <Route exact path="/contact" element={<Contact/>} ></Route>
+          <Route exact path="/login" element={<Login/>} ></Route>
+          <Route exact path="/register" element={<SignUp/>} ></Route>
+
       </Routes>
       <Footer/>
     </BrowserRouter>

@@ -54,7 +54,7 @@ function About() {
         </p>
 
         <p className="font-bold text-xl py-2">Happy Journey</p>
-        <p className="font-signature text-4xl">Pushpwsh Almiya</p>
+        <p className="font-signature text-4xl">Pushpesh Almiya</p>
       </div>
     </div>
   );
